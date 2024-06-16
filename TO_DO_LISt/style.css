@@ -1,0 +1,114 @@
+*{
+margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html,body{
+ height:100%;
+ width:100%;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(35deg, rgb(43, 0, 255),rgb(234, 8, 246));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+.to-do{
+    width: 40em;
+    background-color: white;
+    padding: 3.5rem;
+    border-radius: 20px;
+    }
+.to-do h1{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 1rem 0;
+    width: 16rem;
+    display: flex;
+    gap: 10px;
+    }
+.to-do h1 img{
+    width: 40px;
+}
+.input-box{
+    display: flex;
+    height: 60px;
+    width: 100%;
+    border-radius: 50px;
+    justify-content: space-between;
+    background-color: rgb(221, 221, 221);
+}
+.input{
+    border: none;
+    flex: 1;
+    font-size: 20px;
+    background-color: transparent;
+    padding: 1.5em;
+    outline: none;
+    }
+.btn{
+    width: 10rem;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    outline: none;    
+    background-color: rgb(245, 76, 33);
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    }
+    .btn:hover{
+        background-color: rgb(224, 66, 27);
+
+    }
+.do-list{
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+
+}
+.do-list li::before{
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    left: 10px;
+    background-repeat: 50%;
+    background-image: url(./images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+   
+}
+.do-list li{
+    list-style: none;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    padding: 12px 8px 12px 60px;
+    user-select: none;
+}
+
+.checked{
+    color: rgb(116, 110, 110);
+    text-decoration: line-through;
+}
+.do-list li.checked::before{
+    background-image: url("./images/checked.png");
+}
+ .do-list li span:hover{
+    background-color: rgb(202, 197, 197);
+ }
+ .do-list li span{
+    transition: background-color 0.2s;
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+}
