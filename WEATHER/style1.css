@@ -6,7 +6,6 @@
 html,body{
  height:100%;
  width:100%;
- background-color:var(--black);
  font-family: "Roboto", sans-serif;
  font-style: normal;
  user-select: none;
@@ -31,7 +30,7 @@ header{
 #card{
     display: flex;
     flex-direction: column;
-
+    box-shadow: 2px 2px 4px black;
   color: var(--white);
     border-radius: 20px;
     padding: 2.5rem;
